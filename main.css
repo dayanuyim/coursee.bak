@@ -1,0 +1,151 @@
+body {
+  padding: 1em;
+  background: lightyellow;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+  /*
+  font-family: Comic Sans MS,arial,helvetica,sans-serif;
+  */
+  /*
+  font-family: 'cwTeXFangSong';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot?#iefix) format('embedded-opentype'),
+  url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff2) format('woff2'),
+  url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff) format('woff'),
+  url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.ttf) format('truetype');
+  */
+}
+
+ul{
+  padding-left: 1em;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+a:hover {
+  color:dimgray;
+}
+
+nav {
+    background: rgba(248,248,248,.7);
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    padding: 1em;
+    z-index: 999;
+}
+nav a{
+  color:black;
+}
+
+section{
+  margin: 1em 0;
+  padding:1em;
+  border-radius: 8px;
+  background: #fcf1ce;
+  border-right: dimgray 1px solid;
+  border-bottom: dimgray 1px solid;
+  position: relative;  /*for .sec-toggle to positon absolutely*/
+}
+.sec-toggle{
+    border-width: 0px;
+    background: transparent;
+    position: absolute;
+    left: -0.5em;
+    top: 1.5em;
+}
+
+.sec-toggle::after{
+    content: '▼';
+}
+.sec-toggle.collapse::after{
+    content: '⯈';
+}
+
+/*
+section{
+  padding:1em;
+  border-radius: 8px;
+  border-right: transparent 1px solid;
+  border-bottom: transparent 1px solid;
+}
+section:hover{
+  background: lightgoldenrodyellow;
+  border-right: dimgray 1px solid;
+  border-bottom: dimgray 1px solid;
+}
+*/
+time {
+  color: #2f3c93;
+  font-weight: bold;
+/*
+  color: white;
+  background: green;
+  font-weight: bold;
+  padding: 0 2px;
+  margin: 1px;
+  border-radius: 4px;
+*/
+}
+
+h1 datetime{
+    font-size: 0.7em;
+    margin-left: 1em;
+}
+
+h2{
+    margin-top: 0px;
+}
+
+.hide{
+    display: none;
+}
+
+.tag{
+    color: white;
+    background: dimgray;
+    /*font-weight: bold;*/
+    padding: 1px 4px 0px 4px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0px 4px 2px 0;
+    /* min-width: 4em;*/
+}
+
+.tag-vehicle{
+    color: white;
+    background: cornflowerblue;
+}
+
+.join > :not(:last-child)::after {
+  content: ' | '
+}
+
+.path > :not(:last-child)::after {
+  content: '➤'
+}
+
+/* remove the newline between spans*/
+/*
+.path {
+  font-size: 0;
+}
+.path > span {
+  display: inline-block;
+  font-size: 16px;
+}
+*/
+
+.course-name{
+  border: black 1px dashed;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.alt {
+  color: red;
+  font-size: smaller;
+}
