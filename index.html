@@ -1,0 +1,325 @@
+<html>
+
+<head>
+  <title>郡大西巒</title>
+</head>
+
+<style>
+body {
+  padding: 1em;
+  background: lightyellow;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+  /*
+  font-family: Comic Sans MS,arial,helvetica,sans-serif;
+  */
+  /*
+  font-family: 'cwTeXFangSong';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot?#iefix) format('embedded-opentype'),
+  url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff2) format('woff2'),
+  url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff) format('woff'),
+  url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.ttf) format('truetype');
+  */
+}
+
+a {
+  text-decoration: none;
+  color:blue;
+}
+
+nav {
+    background: rgba(255,255,255,.8);
+    position: fixed;
+    bottom: 50%;
+    right: 2em;
+    padding-right: 1em;
+}
+nav a{
+  color:black;
+}
+
+section{
+  margin: 1em 0;
+  padding:1em;
+  border-radius: 8px;
+  background: #fcf1ce;
+  border-right: dimgray 1px solid;
+  border-bottom: dimgray 1px solid;
+}
+/*
+section{
+  padding:1em;
+  border-radius: 8px;
+  border-right: transparent 1px solid;
+  border-bottom: transparent 1px solid;
+}
+section:hover{
+  background: lightgoldenrodyellow;
+  border-right: dimgray 1px solid;
+  border-bottom: dimgray 1px solid;
+}
+*/
+time {
+    color: white;
+    background: green;
+    font-weight: bold;
+    padding: 0 2px;
+    margin: 1px;
+    border-radius: 4px;
+}
+
+.tag{
+    color: white;
+    background: dimgray;
+    /*font-weight: bold;*/
+    padding: 3px 4px 1px 4px;
+    margin: 2px 4px 2px 0;
+    border-radius: 4px;
+    /* min-width: 4em;
+    display: inline-block; */
+}
+
+.tag-vehicle{
+    color: white;
+    background: cornflowerblue;
+}
+
+.join > :not(:last-child)::after {
+  content: ' | '
+}
+
+.path > :not(:last-child)::after {
+  content: ' ➤'
+}
+
+.course-name{
+  border: black 1px dashed;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.alt {
+  color: red;
+  font-size: smaller;
+}
+
+</style>
+
+<body>
+
+<h1 class="course-name">郡大西巒</h1>
+
+<!-- TODO: auto to generate the list-->
+<nav>
+  <ul>
+    <li><a href="#id">Todo</a></li>
+    <li><a href="#weather">天氣</a></li>
+    <li><a href="#map">地圖</a></li>
+    <li><a href="#doc">文件</a></li>
+    <li><a href="#trk-plan">預計行程</a></li>
+    <li><a href="#trk-facto">實際行程</a></li>
+    <li><a href="#trk-rec">行程記錄</a></li>
+    <li><a href="#epilogue">後記</a>
+      <ul>
+        <li><a href="#supply">資源銷耗</a></li>
+        <li><a href="#caretaker">留守記錄</a></li>
+      </ul>
+    </li>
+    <li><a href="#info">行程資訊</a></li>
+    <li><a href="#transport">交通</a></li>
+    <li><a href="#lodge">住宿</a></li>
+    <li><a href="#ref">行程參考</a></li>
+  </ul>
+</nav>
+
+<section id="todo">
+  <h4>TODO</h4>
+  <div class="todo-b">
+    <ul>
+      <li>MM/DD(W)
+        <ul>
+          <li><input type="checkbox">留守</input></li>
+          <li><input type="checkbox">保險</input></li>
+          <li><input type="checkbox">確認路況</input></li>
+          <li><input type="checkbox">充電(電池/營燈)</input></li>
+        </ul>
+      </li>
+      <li>MM/DD(W)
+        <ul>
+          <li><input type="checkbox">糧食/炊具</input></li>
+          <li><input type="checkbox">火車票</input></li>
+          <li><input type="checkbox">打包完成(手電筒/營燈/拖鞋/盥洗用品)</input></li>
+        </ul>
+      </li>
+      <li>MM/DD(W)
+        <ul>
+          <li><input type="checkbox">剪指甲</input></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="weather">
+  <h2>天氣預報</h2>
+  <div>
+    <div>日出日落 <a href="https://sunrise.maplogs.com/zh-TW/taiwan.777.html" target="_blank">0625~1754</a></div>
+    <div class="join">中央氣象局
+      <a href="http://www.cwb.gov.tw/V7/forecast/entertainment/tribes/014_1001327A04.htm">佳暮</a>
+      <a href="http://www.cwb.gov.tw/m/f/entertainment/E040.php">知本</a>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <h2>地圖</h2>
+  <div>
+    <div><a href="https://www.dropbox.com/s/0m7ha4hrnhcnnez/ref.gpx?dl=1">參考航跡</a></div>
+    <div><a href="https://www.dropbox.com/s/7zchjcrpuoxcis0/overview.jpg?dl=1">Overview</a></div>
+    <div class="join">魯地圖
+      <a href="https://www.dropbox.com/s/xzuz2yz4igvfwj1/d1.png?dl=1">d1</a>
+      <a href="https://www.dropbox.com/s/6bhxlayppi4lqpn/d2.png?dl=1">d2</a>
+      <a href="https://www.dropbox.com/s/q1t328v0u3hr44z/d3.png?dl=1">d3</a>
+    </div>
+  </div>
+</section>
+
+<section id="doc">
+  <h2>文件</h2>
+  <div>
+    入山證(含名冊、計畫書、路線圖)
+  </div>
+</section>
+
+<section id="trk-plan">
+  <h2>預計行程</h2>
+  <div>
+    <div><a title="瑞穗" href="https://www.cwb.gov.tw/V8/C/L/Tribes/012/Map_Tribes_1001509.html">🌤</a>
+      <span class="tag">D00</span>
+      <span class="path">
+        <span>台北</span>
+        <span>瑞穗</span>
+    </div>
+    <div><a title="光復" href="https://www.cwb.gov.tw/V8/C/L/Tribes/012/Map_Tribes_1001507.html">🌤</a>
+      <span class="tag">D01</span>
+      <span class="path">
+        <span>瑞穗</span>
+        <span><time>0600</time>大富</span>
+        <span><time>0630</time>大富產道口<span class="alt">200</span></span>
+        <span><time>0800</time>柵門<span class="alt">680</span></span>
+        <span><time>0900</time>虎狼山稜<span class="alt">850</span></span>
+        <span><time>1030~1100</time>上稜(午餐)<span class="alt">1150</span></span>
+        <span><time>1330</time>拔仔山北鞍<span class="alt">1720</span></span>
+        <span><time>1430</time>關門古道休息站(水)</span>
+        <span><time>1600</time>4T平地<span class="alt"></span></span>
+      </span>
+    </div>
+    <div><a title="萬榮" href="https://www.cwb.gov.tw/V8/C/L/Tribes/009/Map_Tribes_1001512.html">🌤</a>
+      D02 <time>0600</time>C01-北繞興魯郡山-北繞馬侯宛山-<time>1300</time>倫太文前鞍(水)-<time>1430</time>倫太文山-<time>1600</time>三叉路(水?)
+    </div>
+  </div>
+  <div>
+    <h4>注意事項</h4>
+    <div><span class="tag">D2/齊力斷金崩壁</span>高繞，叉路明顯 (參考roachy，上山頭小鞍後腰繞左稜)</div>
+    <div><span class="tag">D3/沙溪林道後崩壁</span>高繞後腰繞</div>
+    <div><span class="tag">D4/雨谷亭前50米崩壁大崩</span>不好過，可考慮直接上稜高繞，再選擇沿稜或由乾溝下雨谷亭。(參考roachy)</div>
+  </div>
+  <div>
+    <h4>入山證</h4>
+  </div>
+</section>
+
+<section id="trk-facto">
+  <div>
+    <h2>實際行程</h2>
+  </div>
+</section>
+
+<section id="trk-rec">
+  <h2>行程記錄</h2>
+  <div>
+  </div>
+</section>
+
+<section id="epilogue">
+  <h2>後記</h2>
+  <div>
+    <section id="supply">
+      <h2>資源銷耗</h2>
+      <div>
+        <div><span class="tag">GPS電池</span>NN顆</div>
+        <div><span class="tag">瓦斯</span>570g ~= 2.5罐</div>
+        <div><span class="tag">衛生紙</span>&lt;半包</div>
+      </div>
+    </section>
+    <section id="caretaker">
+      <h2>留守紀錄</h2>
+    </section>
+  </div>
+</section>
+
+<section id="info">
+  <h2>行程資訊</h2>
+  <div>
+    <div>
+      <h4>營地|水源</h4>
+      <span class="tag">O | X</span>松針營地 無水源
+    </div>
+    <div>
+      <h4>訊號</h4>
+      (2019/11 中華電信4G)
+      起登位於東部時，手機訊號較少且弱；但越往西走，受惠於玉山北峰基地台的建置，南三段手機訊號滿多的；整理如下：
+      <ul>
+        <li><span class="tag">瑞穗林道33.9K</span>可通(微弱)</li>
+        <li><span class="tag">沙武巒越稜點附近</span>可通(微弱)</li>
+        <li><span class="tag">盧利拉駱山三角點及往前約0.1K處</span>可通(微弱)</li>
+        <li><span class="tag">丹大山三角點</span>陰天及晴天測試約半小時(均無訊號)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>徹退路線</h4>
+    </div>
+  </div>
+</section>
+
+<section id="transport">
+  <h2>交通</h2>
+  <div>
+    <div>
+      <h4>去程</h4>
+      <div><span class="tag tag-vehicle">高鐵0157</span>1931起點-2020經過-2105終點 $700</div>
+      <div><span class="tag tag-vehicle">區間3217</span>2118起點-2156終點 $47</div>
+    </div>
+    <div>
+      <h4>回程</h4>
+      <div><a href="http://www.gbus.com.tw/sys/modules/tinyd2/index.php?id=8"><span class="tag tag-vehicle">豐榮6288(水里-雙龍)</span></a>
+        地利-苗圃 $27, 20min
+        <div>雙龍[發] 0640 0800 1030 <b>1230</b>1230 <b>1500</b> <b>1720</b></div>
+      </div>
+      <div>
+        <a href="http://www.ylbus.com.tw/6732-6734-road.html"><span class="tag tag-vehicle">台灣好行6732(東埔-水里)</span></a>
+        <a href="http://www.ylbus.com.tw/6732-6734-road.html"><span class="tag tag-vehicle">台灣好行6734(東埔-水里)</span></a>
+        苗圃-東埔 $118
+        <div>6732水里[發] 0600 0800 0900 <b>1300</b> <u>1430</u> <b>1740</b> <u>2000</u> (<u>周五停駛</u>)</div>
+        <div>6734水里[發] 1110 <b>1610</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lodge">
+  <h2>住宿</h2>
+  <div><span class="tag">D0 屏東</span>Airbun 屏東市中山一路58-3號 / Yi Usuan Chiu / 0905-132-101</div>
+  <div><span class="tag">D10 知本森林遊樂區</span>觀海亭</div>
+  <div><span class="tag">D10 知本</span>台東知本忠義堂 / 卑南鄉龍泉路38號 / 07:30~21:30</div>
+</section>
+
+<section id="ref">
+  <h2>行程參考</h2>
+  <div>2017.02 <a href="https://www.keepon.com.tw/thread-d4472449-1af3-e611-80c7-901b0e54a4e6.html">蚯蚓．關門橫斷秘境之旅</a></div>
+</section>
+
+</body>
+</html>
