@@ -17,7 +17,12 @@ body {
   */
 }
 
-ul{
+p {
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+}
+
+ul {
   padding-left: 1em;
 }
 
@@ -102,6 +107,10 @@ h2{
 
 .hide{
     display: none;
+}
+
+.lines > span{
+  display: block;
 }
 
 .tag{
