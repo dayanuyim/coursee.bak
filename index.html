@@ -264,6 +264,35 @@
       </p>
     </div>
     <canvas id="trans-route" width="400" height="400" style="border:1px solid transparent"></canvas>
+
+    <svg height="400" width="400">
+      <circle cx="50" cy="50" r="3" stroke="black" stroke-width="1" fill="green" />
+      <text x="50" y="50" fill="black" dominant-baseline="ideographic" text-anchor="middle" >水里</text>
+
+      <line x1="50" y1="50" x2="50" y2="100" style="stroke:rgb(0,0,0);stroke-width:2" />
+      <text x="50" y="75" dx="-2" font-size="smaller" fill="blue" text-anchor="end">10min</text>
+
+      <circle cx="50" cy="100" r="3" stroke="black" stroke-width="1" fill="green" />
+      <text x="50" y="100" fill="black">苗圃</text>
+
+      <line x1="50" y1="100" x2="50" y2="125" style="stroke:rgb(0,0,0);stroke-width:2" />
+      <text x="50" y="112" dx="-2" font-size="smaller" fill="blue" text-anchor="end">5min</text>
+
+      <circle cx="50" cy="125" r="3" stroke="black" stroke-width="1" fill="green" />
+      <text x="50" y="125" fill="black" text-anchor="end" dominant-baseline="hanging">新山</text>
+
+      <line x1="50" y1="100" x2="50" y2="200" style="stroke:rgb(0,0,0);stroke-width:2" />
+      <text x="50" y="162" dx="-2" font-size="smaller" fill="blue" text-anchor="end">15min</text>
+
+      <circle cx="50" cy="200" r="3" stroke="black" stroke-width="1" fill="green" />
+      <text x="50" y="200" fill="black" text-anchor="end" dominant-baseline="middle">豐丘</text>
+
+      <line x1="50" y1="200" x2="50" y2="350" style="stroke:rgb(0,0,0);stroke-width:2" />
+      <text x="50" y="275" dx="-2" font-size="smaller" fill="blue" text-anchor="end">30min</text>
+
+      <circle cx="50" cy="350" r="3" stroke="black" stroke-width="1" fill="green" />
+      <text x="50" y="350" fill="black" text-anchor="middle" dominant-baseline="hanging">東埔</text>
+    </svg>
   </div>
 </section>
 
@@ -329,9 +358,9 @@
   [mx, my] = drawLoc(ctx, x, y, '苗圃', 2);
   [x, y]   = drawLin(ctx, x, y, 0, 25, '5m');
   [nx, ny] = drawLoc(ctx, x, y, '新山', 3);
-  [x, y]   = drawLin(ctx, x, y, 0, 75, '20m');
+  [x, y]   = drawLin(ctx, x, y, 0, 75, '15m');
   [fx, fy] = drawLoc(ctx, x, y, '豐丘', 3);
-  [x, y]   = drawLin(ctx, x, y, 0, 150, '60m');
+  [x, y]   = drawLin(ctx, x, y, 0, 150, '30m');
   [ex, ey] = drawLoc(ctx, x, y, '東埔', 7);
 
   [x, y]   = drawLin(ctx, mx, my, 100, 0, '20m');
