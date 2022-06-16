@@ -3,19 +3,24 @@
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="../favicon.png" />
-  <link rel="stylesheet" type="text/css" href="../main.css" />
-  <script type="text/javascript" src="../main.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  <script type="text/javascript" src="../js/utils.js"></script>
+  <script type="text/javascript" src="../js/h2m.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
   <title>郡大西巒</title>
 </head>
 
 <body>
 
-<h1 class="course-name">郡大西巒<datetime>YYYY.MM.DD</datetime></h1>
+<header>
+  <h1 class="course-name">郡大西巒</h1>
+  <time datetime="2022-08-21">2022.08.21</time>
+</header>
 
 
 <!-- TODO: auto to generate the list-->
 <nav>
-  <ul>
+  <ul class="toc">
     <li><a href="#todo">Todo</a></li>
     <li><a href="#weather">天氣</a></li>
     <li><a href="#map">地圖</a></li>
@@ -34,7 +39,11 @@
     <li><a href="#lodge">住宿</a></li>
     <li><a href="#ref">行程參考</a></li>
   </ul>
-  <button onclick="toggleAllSec()">Toggle</button>
+  <ul class="utils">
+    <li><button type="button" onclick="expandSecs()">Expand</button></li>
+    <li><button type="button" onclick="collapseSecs()">Collapse</button></li>
+    <li><button type="button" onclick="saveMarkdown()">Save MD</button></li>
+  </ul>
 </nav>
 
 <section id="todo">

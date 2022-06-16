@@ -41,9 +41,19 @@ nav {
     right: 2em;
     padding: 1em;
     z-index: 999;
+    display: grid;
 }
 nav a{
   color:black;
+}
+
+nav .toc{
+  grid-column: 1;
+}
+
+nav .utils{
+  list-style-type: none;
+  grid-column: 2;
 }
 
 section{

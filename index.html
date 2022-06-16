@@ -3,13 +3,41 @@
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="favicon.png" />
-  <link rel="stylesheet" type="text/css" href="main.css" />
-  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script type="text/javascript" src="js/main.js"></script>
   <title>登山行程</title>
 </head>
 
+<style>
+  body{
+    display: grid;
+    grid-template-columns: 200px auto;
+  }
+  body > .course-list {
+    grid-column: 1;
+  }
+  body > .course-content {
+    grid-column: 2;
+  }
+</style>
+
 <body>
-    <a href="郡大西巒/index.html">郡大西巒</a>
+  <ul class="course-list">
+    <li><a href="#" onclick="loadCourse(this)">郡大西巒</a></li>
+  </ul>
+  <div class="course-content"></div>
 </body>
+
+<script>
+  function loadCourse(target){
+    const name = target.innerHTML;
+
+    //todo: read md and gen html
+    const txt = `<a href="${name}/course.html">${name}</a>`;
+
+    //replace
+    document.body.querySelector('.course-content').innerHTML = txt;
+  }
+</script>
 
 </html>

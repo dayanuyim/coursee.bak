@@ -1,18 +1,42 @@
-
+/*
 function _toggleSecEl(sec){
     sec.querySelector('.sec-content').classList.toggle('hide');
     sec.querySelector('.sec-toggle').classList.toggle('collapse');
 }
 
-function toggleSec(target){
-    _toggleSecEl(target.closest('section'));
+function _hideSecEl(sec){
+    sec.querySelector('.sec-content').classList.add('hide');
+    sec.querySelector('.sec-toggle').classList.add('collapse');
 }
 
+function _showSecEl(sec){
+    sec.querySelector('.sec-content').classList.remove('hide');
+    sec.querySelector('.sec-toggle').classList.remove('collapse');
+}
+*/
 
-function toggleAllSec(){
-    document.querySelectorAll('section').forEach(sec =>{
-        _toggleSecEl(sec);
-    })
+function toggleSec(target){
+    const sec = target.closest('section')
+    sec.querySelector('.sec-content').classList.toggle('hide');
+    sec.querySelector('.sec-toggle').classList.toggle('collapse');
+}
+
+function collapseSecs(){
+    document.querySelectorAll('.sec-content').forEach(e => e.classList.add('hide'));
+    document.querySelectorAll('.sec-toggle').forEach(e => e.classList.add('collapse'));
+}
+
+function expandSecs(){
+    document.querySelectorAll('.sec-content').forEach(e => e.classList.remove('hide'));
+    document.querySelectorAll('.sec-toggle').forEach(e => e.classList.remove('collapse'));
+}
+
+function saveMarkdown(){
+    const date = document.body.querySelector('header time').getAttribute('datetime');
+    const hdr = document.body.querySelector('header h1').innerHTML;
+    const filename = `${date}_${hdr}.md`;
+
+    download(htmlToMarkdown(), filename, 'text/markdown');
 }
 
 //canvas ===========================================
